@@ -1,10 +1,16 @@
-public class Play {
+public abstract class Play {
 
-  public String name;
-  public String type;
+  private String name;
 
-  public Play(String name, String type) {
-    this.name = name;
-    this.type = type;
+  public String getName() {
+    return name;
   }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public abstract Double calculOfAmount(Integer audience);
+  public abstract Double calculOfCredits(Integer audience);
+
 }
