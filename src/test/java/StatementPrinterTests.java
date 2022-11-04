@@ -11,18 +11,19 @@ public class StatementPrinterTests {
     @Test
     void exampleStatement() {
 
+        Customer customer = new Customer("BigCo");
+
         ArrayList<Play> plays = new ArrayList<>();
         plays.add(new Tragedy("Hamlet"));
         plays.add(new Comedy("As You Like It"));
         plays.add(new Tragedy("Othello"));
 
-        Invoice invoice = new Invoice("BigCo", List.of(
+        Invoice invoice = new Invoice(customer, List.of(
                 new Performance(plays.get(0), 55),
                 new Performance(plays.get(1), 35),
                 new Performance(plays.get(2), 40)));
 
-        StatementPrinter statementPrinter = new StatementPrinter();
-        var result = statementPrinter.print(invoice, plays);
+        var result = invoice.print(plays);
 
         verify(result);
     }
