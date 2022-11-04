@@ -15,6 +15,7 @@ public class StatementPrinter {
     StringBuilder builder = new StringBuilder().append(String.format("Statement for %s\n", invoice.customer));
     NumberFormat frmt = NumberFormat.getCurrencyInstance(Locale.US);
 
+
     for (Performance perf : invoice.performances) {
       Play play = perf.play;
       Double thisAmount = play.calculOfAmount(perf.audience);
