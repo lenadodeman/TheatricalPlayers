@@ -23,6 +23,7 @@ public class StatementPrinterTests {
                 new Performance(plays.get(2), 40)));
 
         var result = invoice.printToText();
+        var result2 = invoice.printToHTML();
 
         verify(result);
     }
