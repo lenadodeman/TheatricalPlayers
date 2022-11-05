@@ -1,8 +1,7 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+
 
 import static org.approvaltests.Approvals.verify;
 
@@ -23,7 +22,7 @@ public class StatementPrinterTests {
                 new Performance(plays.get(1), 35),
                 new Performance(plays.get(2), 40)));
 
-        var result = invoice.print(plays);
+        var result = invoice.printToText();
 
         verify(result);
     }

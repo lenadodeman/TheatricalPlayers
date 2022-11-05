@@ -10,7 +10,7 @@ public abstract class Play {
     this.name = name;
   }
 
-  public abstract Double calculOfAmount(Integer audience);
-  public abstract Double calculOfCredits(Integer audience);
+  public abstract Double calculOfPrice(Integer audience);
+  public abstract Double calculOfFidelity(Integer audience);
 
 }
